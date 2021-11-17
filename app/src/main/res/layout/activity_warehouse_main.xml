@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="#face2f"
+    android:layout_height="match_parent"
+    tools:context=".warehouse.WarehouseMainActivity">
+
+    <LinearLayout
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:background="#FFC800"
+        android:elevation="6dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="WareHouse Dashboard"
+            android:textColor="#ffffff"
+            android:textStyle="bold"
+            android:textSize="32sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Choose an option"
+            android:textColor="#ffffff"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/view"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_gravity="center">
+
+        <RelativeLayout
+            android:id="@+id/rlFirstRow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="130dp"
+                android:layout_height="110dp"
+                android:layout_marginEnd="12dp"
+                android:layout_toStartOf="@+id/cvMedicalRequest"
+                app:cardCornerRadius="20dp"
+                app:cardBackgroundColor="@color/white"
+                app:cardUseCompatPadding="true"
+                android:outlineSpotShadowColor="#000000"
+                android:elevation="5dp">
+
+                <Button
+                    android:id="@+id/checkin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@android:color/transparent"
+                    android:text="Check-In Product"
+                    android:textColor="#22BE87"
+                    android:textSize="10dp" />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvMedicalRequest"
+                android:layout_width="130dp"
+                android:layout_height="110dp"
+                android:layout_centerHorizontal="true"
+                app:cardUseCompatPadding="true"
+                app:cardCornerRadius="20dp"
+                app:cardBackgroundColor="@color/white"
+                android:outlineSpotShadowColor="#000000"
+                android:elevation="5dp">
+
+                <Button
+                    android:id="@+id/viewinvenrtory"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@android:color/transparent"
+                    android:text="View Inventory"
+                    android:textColor="#22BE87"
+                    android:textSize="10sp" />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="130dp"
+                android:layout_height="110dp"
+                app:cardUseCompatPadding="true"
+                android:layout_marginStart="12dp"
+                app:cardBackgroundColor="@color/white"
+                android:layout_toEndOf="@+id/cvMedicalRequest"
+                app:cardCornerRadius="20dp"
+                android:outlineSpotShadowColor="#000000"
+                android:elevation="5dp">
+
+                <Button
+                    android:id="@+id/requests"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@android:color/transparent"
+                    android:text="Requests"
+                    android:textColor="#22BE87"
+                    android:textSize="10sp" />
+            </androidx.cardview.widget.CardView>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rlFirstRow"
+            android:layout_centerHorizontal="true">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/chats"
+                android:layout_width="130dp"
+                android:layout_height="110dp"
+                app:cardUseCompatPadding="true"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="20dp"
+                android:outlineSpotShadowColor="#000000"
+                android:elevation="5dp">
+
+                <Button
+                    android:id="@+id/chat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Chat"
+                    android:background="@android:color/transparent"
+                    android:textColor="#22BE87"
+                    android:textSize="10sp" />
+
+            </androidx.cardview.widget.CardView>
+
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/signOutBtn"
+        android:layout_width="211dp"
+        android:layout_height="45dp"
+        android:background="#EDBD0F"
+        android:text="Sign Out"
+        android:textColor="#22BE87"
+        android:textSize="16sp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"/>
+
+</RelativeLayout>
