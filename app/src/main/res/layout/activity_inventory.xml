@@ -1,0 +1,91 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#face2f"
+    android:orientation="vertical"
+    tools:context=".warehouse.InventoryActivity"
+    tools:ignore="HardcodedText">
+
+    <SearchView
+        android:id="@+id/searchView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:queryHint="Search Here"
+        android:layout_margin="15dp"
+        android:iconifiedByDefault="false"
+        />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:background="#face2f"
+        android:text="Search By"
+        android:textColor="@color/white"
+        android:textSize="18sp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_margin="10dp"
+        android:padding="5dp"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="#AA880F"
+            android:text="Name"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:elevation="10dp"
+            android:layout_weight="1"/>
+
+        <Space
+            android:layout_width="15dp"
+            android:layout_height="1dp"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="#face2f"
+            android:id="@+id/vendor"
+            android:text="Vendor"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:elevation="10dp"
+            android:layout_weight="1"/>
+
+        <Space
+            android:layout_width="15dp"
+            android:layout_height="1dp"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="#face2f"
+            android:text="ID"
+            android:id="@+id/id"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:elevation="10dp"
+            android:layout_weight="1"/>
+    </LinearLayout>
+
+    <GridView
+        android:id="@+id/simpleGridView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="10dp"
+        android:numColumns="2"
+        android:padding="10dp" />
+
+</LinearLayout>
